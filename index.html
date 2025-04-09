@@ -4,81 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pépites Coffee</title>
+
+  <!-- Import d'une police proche de Euclid (Urbanist, dispo sur Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;600&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Euclid;
+      font-family: 'Urbanist', sans-serif;
       text-align: center;
       padding: 3rem;
-      background: #e69f75; /* Fond saumon */
-      color: #5E4B3C; /* Couleur chocolatée (brun) pour le texte */
+      background: #e69f75; /* Fond saumon/orange clair */
+      color: #5E4B3C;
       margin: 0;
     }
-    h1 {
-      font-size: 4rem; /* Texte "Coffee Shop Ambulant" en grand */
-      font-family: Euclid; /* Police rétro de café */
-      font-weight: bold;
-      color: #842020; /* rouge du logo */
-      margin: 1.5rem 0;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Ombre douce pour donner du relief */
+
+    img {
+      max-width: 150px;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
     }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #842020;
+      margin: 1rem 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
     h2 {
       font-size: 2rem;
-      color: #8A5A3A; /* Marron chocolat pour une touche chaleureuse */
+      color: #8A5A3A;
       margin-top: 0;
       font-style: italic;
     }
+
     p {
       font-size: 1.2rem;
       line-height: 1.6;
       color: #3E2C2A;
-      font-weight: 300; /* Légèrement plus léger pour l'effet cosy */
-      margin-top: 1rem;
+      font-weight: 300;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 1rem auto 2rem auto;
     }
-    img {
-      max-width: 150px; /* Garder une taille plus modeste du logo */
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
+
     a {
-      display: inline-block; /* bouton*/
-      margin-top: 2rem;
+      display: inline-block;
+      margin: 1rem;
       padding: 1rem 2rem;
-      background: #842020; /* rouge logo */
+      background: #842020;
       color: white;
       text-decoration: none;
       border-radius: 12px;
       font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce sur le bouton */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s ease;
     }
+
     a:hover {
-      background: #D17A4A; /* Changer le fond au survol pour un effet warm */
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Ombre plus forte */
+      background: #D17A4A;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
+
     footer {
       margin-top: 4rem;
       font-size: 0.9rem;
-      color: #7F6A5C; /* Gris clair pour un footer discret */
+      color: #7F6A5C;
     }
   </style>
 </head>
 <body>
-  <img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo PepitesCoffee" />
-    <h1>Coffee Shop Ambulant</h1>
-  <h2>Découvrir l'univers de Pépites Coffee</h2>
-  <p>
-    Prestations privées, évènementiel, ... baristace prend du temps, de l'énergie et des frais...  
-    Pourtant vos retours sont incroyables 🙏  
-    Retrouvez dès maintenant nos jeux inspirants sur notre boutique Etsy.
-  </p>
-  <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Nous découvrir sur les réseaux</a>
 
-    </p>
-<a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous</a>
-  
+  <!-- ✅ Logo en haut -->
+  <img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo Pépites Coffee" />
+
+  <!-- ✅ Titre en dessous -->
+  <h1>Coffee Shop Ambulant</h1>
+  <h2>Découvrir l'univers de Pépites Coffee</h2>
+
+  <p>
+    Prestations privées, évènementiel, barista mobile sur-mesure.<br>
+    Monter un coffee shop ambulant demande du temps, de l'énergie et des frais...  
+    Pourtant vos retours sont incroyables 🙏  
+    On continue l'aventure : contactez-nous pour vos événements, ou venez nous suivre !
+  </p>
+
+  <!-- Boutons -->
+  <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Nous découvrir sur les réseaux</a>
+  <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous</a>
+
   <footer>
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
