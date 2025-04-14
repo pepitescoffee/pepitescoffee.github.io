@@ -23,10 +23,14 @@
       margin: 0;
     }
 
-    img {
+    /* 🖼️ Logo placé en haut de la page */
+    .logo {
+      position: absolute;
+      top: 20px; /* Positionner à 20px du haut de l'écran */
+      left: 50%;
+      transform: translateX(-50%); /* Centrer le logo horizontalement */
       max-width: 150px;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
+      z-index: 3; /* Le logo doit être au-dessus de la vidéo */
     }
 
     h1 {
@@ -35,12 +39,14 @@
       color: #842020;
       margin: 1rem 0;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      z-index: 2; /* Le texte doit être visible après l'overlay */
     }
 
     h2 {
       font-size: 2rem;
       color: #788770;
       margin-top: 0;
+      z-index: 2; /* Le texte doit être visible après l'overlay */
     }
 
     p {
@@ -82,8 +88,6 @@
       width: 100%;
       height: 100vh;
       overflow: hidden;
-      margin: 0;
-      padding: 0;
     }
 
     .video-header video {
@@ -103,7 +107,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* Le 0.4 est la transparence, plus il est élevé, plus l'overlay est sombre */
+      background: rgba(0, 0, 0, 0.2); /* Le 0.4 est la transparence, plus il est élevé, plus l'overlay est sombre */
       z-index: 2;
     }
 
@@ -153,13 +157,14 @@
     <!-- 👇 Overlay foncé -->
     <div class="overlay"></div>
     <div class="overlay-content">
+      <!-- 👇 Texte et logo ici -->
       <h1>Coffee Shop Ambulant</h1>
       <h2>Découvrir l'univers de Pépites Coffee</h2>
     </div>
   </header>
 
-  <!-- ✅ Logo -->
-  <img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
+  <!-- ✅ Logo placé en haut -->
+  <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
 
   <!-- ✅ Texte d’introduction -->
   <p>
