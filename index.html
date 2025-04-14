@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pépites Coffee</title>
 
-  <!-- 🎨 CSS : Mise en forme de la page -->
   <style>
-    /* 1. Chargement de la police */
+    /* 🎨 CSS : Mise en forme de la page */
     @font-face {
       font-family: 'Euclid';
       src: url('./fonts/euclid.woff') format('woff');
@@ -15,12 +14,11 @@
       font-style: normal;
     }
 
-    /* 2. Style général de la page */
     body {
       font-family: 'Euclid', sans-serif;
       text-align: center;
       padding: 3rem;
-      background: #e69f75; /* Fond saumon/orange clair */
+      background: #e69f75;
       color: #5E4B3C;
       margin: 0;
     }
@@ -98,9 +96,20 @@
       z-index: 1;
     }
 
+    /* 👇 Overlay sombre sur la vidéo */
+    .video-header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Le 0.4 est la transparence, plus il est élevé, plus l'overlay est sombre */
+      z-index: 2;
+    }
+
     .video-header .overlay-content {
       position: relative;
-      z-index: 2;
+      z-index: 3;
       color: white;
       text-align: center;
       padding: 4rem 2rem;
@@ -141,6 +150,8 @@
       <source src="https://pepitescoffee.github.io/ok%20film.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
+    <!-- 👇 Overlay foncé -->
+    <div class="overlay"></div>
     <div class="overlay-content">
       <h1>Coffee Shop Ambulant</h1>
       <h2>Découvrir l'univers de Pépites Coffee</h2>
