@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pépites Coffee est un coffee shop ambulant pour événements, prestations privées et barista mobile.">
-<meta name="author" content="Pépites Coffee">
-
   <title>Pépites Coffee</title>
-  
+
+  <!-- 🎨 CSS : Mise en forme de la page -->
   <style>
-    /* 1. Chargement de la police Euclid en local */
+    /* 1. Chargement de la police */
     @font-face {
       font-family: 'Euclid';
       src: url('./fonts/euclid.woff') format('woff');
       font-weight: normal;
       font-style: normal;
     }
-  
+
+    /* 2. Style général de la page */
     body {
-      font-family: 'Euclid', sans-serif; /* Utilisation de la police chargée */
-      text-align: center;  /* Centrage de tous les éléments */
+      font-family: 'Euclid', sans-serif;
+      text-align: center;
       padding: 3rem;
       background: #e69f75; /* Fond saumon/orange clair */
-      color: #5E4B3C;      /* Couleur chocolatée pour le texte */
+      color: #5E4B3C;
       margin: 0;
     }
 
@@ -35,7 +34,7 @@
     h1 {
       font-size: 4rem;
       font-weight: bold;
-      color: #842020; /* Couleur du titre */
+      color: #842020;
       margin: 1rem 0;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
@@ -44,7 +43,6 @@
       font-size: 2rem;
       color: #788770;
       margin-top: 0;
-      font-style: regular;
     }
 
     p {
@@ -80,40 +78,79 @@
       color: #7F6A5C;
     }
 
+    /* 🎬 Style pour la vidéo en fond */
+    .video-header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
 
+    .video-header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
 
+    .video-header .overlay-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    /* 📱 Responsive pour petits écrans */
     @media (max-width: 600px) {
-  h1 {
-    font-size: 2.5rem;
-  }
+      h1 {
+        font-size: 2.5rem;
+      }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+      h2 {
+        font-size: 1.5rem;
+      }
 
-  p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
+      p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
 
-  a {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-}
-
+      a {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- ✅ Logo en haut -->
-<img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
+  <!-- 🧱 HTML : Structure de la page -->
 
-  <!-- ✅ Titre en dessous -->
-  <h1>Coffee Shop Ambulant</h1>
-  <h2>Découvrir l'univers de Pépites Coffee</h2>
+  <!-- 🎬 Section avec la vidéo en fond -->
+  <header class="video-header">
+    <video autoplay muted loop playsinline>
+      <source src="https://pepitescoffee.github.io/ok%20film.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+    <div class="overlay-content">
+      <h1>Coffee Shop Ambulant</h1>
+      <h2>Découvrir l'univers de Pépites Coffee</h2>
+    </div>
+  </header>
 
+  <!-- ✅ Logo -->
+  <img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
+
+  <!-- ✅ Texte d’introduction -->
   <p>
     Prestations privées, évènementiel, barista mobile sur-mesure.<br>
     Monter un coffee shop ambulant demande du temps, de l'énergie et des frais...  
@@ -121,12 +158,14 @@
     On continue l'aventure : contactez-nous pour vos événements, ou venez nous suivre !
   </p>
 
-  <!-- Boutons -->
+  <!-- ✅ Boutons -->
   <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Nous découvrir sur les réseaux</a>
   <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous</a>
 
+  <!-- ✅ Footer -->
   <footer>
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
+
 </body>
 </html>
