@@ -24,33 +24,30 @@
     }
 
     /* 🖼️ Logo placé en haut de la page */
-    .logo {
-      position: absolute;
-      top: 250px; /* Positionner à 250px du haut de l'écran */
-      left: 50%;
-      transform: translateX(-50%); /* Centrer le logo horizontalement */
-      max-width: 250px;
-      z-index: 3; /* Le logo doit être au-dessus de la vidéo */
-    }
+  .logo {
+  max-width: 250px;
+  margin-bottom: 2rem; /* Espace sous le logo */
+}
 
-    h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      color: #842020;
-      margin: 5rem 0;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      z-index: 2; /* Le texte doit être visible après l'overlay */
-    }
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #842020;
+  margin: 2rem 0 1rem 0; /* Moins de marge en haut, légère en bas */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
 
-    h2 {
-      font-size: 2rem;
-      color: #788770;
-      margin-top: 0;
-      text-shadow: none; /* Enlève l'ombre sur le H2 */
-      z-index: 2; /* Le texte doit être visible après l'overlay */
-    }
+h2 {
+  font-size: 2rem;
+  color: #788770;
+  margin-top: 0;
+  text-shadow: none; /* Enlève l'ombre sur le H2 */
+  z-index: 2;
+}
 
-    p {
+
+    p {    /* Ce bloc règle l’apparence de tous tes paragraphes */
       font-size: 1.2rem;
       line-height: 1.6;
       color: #3E2C2A;
@@ -59,7 +56,7 @@
       margin: 1rem auto 2rem auto;
     }
 
-    a {
+    a {  /* Ce bloc règle l’apparence de tous tes liens , boutons */
       display: inline-block;
       margin: 1rem;
       padding: 1rem 2rem;
@@ -72,7 +69,7 @@
       transition: background-color 0.3s ease;
     }
 
-    a:hover {
+    a:hover {  /* Ce bloc règle ce qu'il se passe quand on passe la souris sur un lien */
       background: #D17A4A;
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
