@@ -6,7 +6,7 @@
   <title>Pépites Coffee</title>
 
   <style>
-    /* 🎨 CSS : Mise en forme de la page */
+    /* 🎨 CSS : Mise en forme générale */
     @font-face {
       font-family: 'Euclid';
       src: url('./fonts/euclid.woff') format('woff');
@@ -17,70 +17,13 @@
     body {
       font-family: 'Euclid', sans-serif;
       text-align: center;
-      padding: 3rem;
+      margin: 0;
+      padding: 0;
       background: #e69f75;
       color: #5E4B3C;
-      margin: 0;
     }
 
-    /* 🖼️ Logo placé en haut de la page */
-  .logo {
-  max-width: 250px;
-  margin-bottom: 2rem; /* Espace sous le logo */
-}
-
-h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #842020;
-  margin: 2rem 0 1rem 0; /* Moins de marge en haut, légère en bas */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #788770;
-  margin-top: 0;
-  text-shadow: none; /* Enlève l'ombre sur le H2 */
-  z-index: 2;
-}
-
-
-    p {    /* Ce bloc règle l’apparence de tous tes paragraphes */
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #3E2C2A;
-      font-weight: 300;
-      max-width: 600px;
-      margin: 1rem auto 2rem auto;
-    }
-
-    a {  /* Ce bloc règle l’apparence de tous tes liens , boutons */
-      display: inline-block;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      background: #842020;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-    }
-
-    a:hover {  /* Ce bloc règle ce qu'il se passe quand on passe la souris sur un lien */
-      background: #D17A4A;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #7F6A5C;
-    }
-
-    /* 🎬 Style pour la vidéo en fond */
+    /* 🎬 Vidéo en fond */
     .video-header {
       position: relative;
       width: 100%;
@@ -98,43 +41,113 @@ h2 {
       z-index: 1;
     }
 
-    /* 👇 Overlay sombre sur la vidéo */
+    /* 👇 Overlay léger sur la vidéo */
     .video-header .overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.2); /* Le 0.4 est la transparence, plus il est élevé, plus l'overlay est sombre */
+      background: rgba(0, 0, 0, 0.2);
       z-index: 2;
     }
 
+    /* 📋 Contenu par-dessus la vidéo */
     .video-header .overlay-content {
       position: relative;
       z-index: 3;
       color: white;
       text-align: center;
-      padding: 4rem 2rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    /* 🖼️ Style du logo */
+    .logo {
+      max-width: 250px;
+      margin-top: 150px; /* Espace depuis le haut de l'écran */
+      margin-bottom: 2rem; /* Espace entre logo et titre */
+    }
+
+    /* 📝 Titre principal */
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #842020;
+      margin: 0 0 1rem 0;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 📝 Sous-titre */
+    h2 {
+      font-size: 2rem;
+      color: #788770;
+      margin-top: 0;
+      text-shadow: none; /* PAS d'ombre sur le H2 */
+    }
+
+    /* ✏️ Texte d'introduction */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #3E2C2A;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 3rem auto 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* 🔗 Liens / Boutons */
+    a {
+      display: inline-block;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      background: #842020;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    a:hover {
+      background: #D17A4A;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 🦶 Pied de page */
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #7F6A5C;
     }
 
     /* 📱 Responsive pour petits écrans */
     @media (max-width: 600px) {
+      .logo {
+        max-width: 180px;
+        margin-top: 100px;
+      }
+
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
 
       p {
         font-size: 1rem;
-        padding: 0 1rem;
       }
 
       a {
-        width: 100%;
+        width: 90%;
         padding: 1rem;
         box-sizing: border-box;
       }
@@ -144,25 +157,24 @@ h2 {
 
 <body>
 
-  <!-- 🧱 HTML : Structure de la page -->
+  <!-- 🧱 Structure de la page -->
 
-  <!-- 🎬 Section avec la vidéo en fond -->
   <header class="video-header">
     <video autoplay muted loop playsinline>
       <source src="https://pepitescoffee.github.io/ok%20film.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
-    <!-- 👇 Overlay foncé -->
+
     <div class="overlay"></div>
+
     <div class="overlay-content">
-      <!-- 👇 Texte et logo ici -->
+      <!-- ✅ Logo dans overlay-content -->
+      <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
+      
       <h1>Coffee Shop Ambulant</h1>
       <h2>Découvrir l'univers de Pépites Coffee</h2>
     </div>
   </header>
-
-  <!-- ✅ Logo placé en haut -->
-  <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
 
   <!-- ✅ Texte d’introduction -->
   <p>
@@ -172,7 +184,7 @@ h2 {
     On continue l'aventure : contactez-nous pour vos événements, ou venez nous suivre !
   </p>
 
-  <!-- ✅ Boutons -->
+  <!-- ✅ Boutons d'action -->
   <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Nous découvrir sur les réseaux</a>
   <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous</a>
 
