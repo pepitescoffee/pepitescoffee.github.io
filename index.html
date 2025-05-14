@@ -204,6 +204,38 @@
       background: #D17A4A;
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
+
+    /* 🎨 Filigrane "En construction" */
+  .watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.4);  /* Couleur rouge transparente */
+    z-index: 9999;  /* Assure que le texte soit au-dessus de tout */
+    pointer-events: none;  /* Permet de ne pas interférer avec les autres éléments de la page */
+    user-select: none; /* Empêche la sélection du texte */
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: 'Euclid', sans-serif; /* Assurez-vous que la même police est utilisée */
+    animation: fadeInOut 3s infinite; /* Animation pour faire clignoter le texte */
+  }
+
+  /* Animation du filigrane "En construction" */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+      
+    }
+  }
   </style>
 </head>
 
@@ -252,6 +284,9 @@
   <footer>
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
+
+   <!-- Filigrane "En construction" -->
+  <div class="watermark">En construction</div>
 
 </body>
 </html>
