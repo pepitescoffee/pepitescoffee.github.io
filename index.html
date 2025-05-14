@@ -6,7 +6,6 @@
   <title>Pépites Coffee</title>
 
   <style>
-    /* 🎨 CSS : Mise en forme de la page */
     @font-face {
       font-family: 'Euclid';
       src: url('./fonts/euclid.woff') format('woff');
@@ -23,7 +22,6 @@
       margin: 0;
     }
 
-    /* 🖼️ Logo placé en haut de la page */
     .logo {
       position: absolute;
       top: 150px;
@@ -50,13 +48,16 @@
       z-index: 2;
     }
 
+    /* ✅ PARAGRAPHE MODIFIÉ ICI */
     p {
       font-size: 1.2rem;
       line-height: 1.6;
       color: #3E2C2A;
-      font-weight: 300;
-      max-width: 600px;
-      margin: 1rem auto 2rem auto;
+      font-weight: bold;
+      max-width: none;
+      margin: 1rem 0 2rem 0;
+      text-align: left;
+      padding: 0 2rem;
     }
 
     a {
@@ -83,7 +84,6 @@
       color: #7F6A5C;
     }
 
-    /* 🎬 Style pour la vidéo en fond */
     .video-header {
       position: relative;
       width: 100%;
@@ -101,7 +101,6 @@
       z-index: 1;
     }
 
-    /* 👇 Overlay sombre sur la vidéo */
     .video-header .overlay {
       position: absolute;
       top: 0;
@@ -121,7 +120,6 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
 
-    /* 🎨 CSS : Style des images et des concepts */
     .concepts-container {
       display: flex;
       justify-content: space-around;
@@ -161,7 +159,6 @@
       line-height: 1.5;
     }
 
-    /* 📱 Responsive pour petits écrans */
     @media (max-width: 600px) {
       .concepts-container {
         flex-direction: column;
@@ -182,7 +179,6 @@
       }
     }
 
-    /* 🎨 Style des boutons sous les concepts */
     .concept-buttons {
       display: flex;
       justify-content: center;
@@ -211,27 +207,21 @@
 
 <body>
 
-  <!-- 🧱 HTML : Structure de la page -->
-
-  <!-- 🎬 Section avec la vidéo en fond -->
   <header class="video-header">
     <video autoplay muted loop playsinline>
       <source src="https://pepitescoffee.github.io/ok%20film.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
-    <!-- 👇 Overlay foncé -->
     <div class="overlay"></div>
     <div class="overlay-content">
-      <!-- 👇 Texte et logo ici -->
       <h1>Coffee Shop Ambulant</h1>
       <h2>Découvrir l'univers de Pépites Coffee</h2>
     </div>
   </header>
 
-  <!-- ✅ Logo placé en haut -->
   <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
 
-  <!-- ✅ Texte d’introduction -->
+  <!-- ✅ Paragraphe principal étendu -->
   <p>
     Prestations privées, évènementiel, barista mobile sur-mesure.<br>
     Monter un coffee shop ambulant demande du temps, de l'énergie et des frais...  
@@ -239,7 +229,6 @@
     On continue l'aventure : contactez-nous pour vos événements, ou venez nous suivre !
   </p>
 
-  <!-- ✅ Section texte + images des concepts -->
   <div class="concepts-container">
     <div class="concept">
       <img src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pepitescoffee%20.png?raw=true" alt="Concept Coffee Truck" class="concept-image" />
@@ -254,13 +243,11 @@
     </div>
   </div>
 
-  <!-- ✅ Boutons sous la présentation des concepts -->
   <div class="concept-buttons">
     <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous pour réserver</a>
     <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Découvrez nos concepts en photos</a>
   </div>
 
-  <!-- ✅ Footer -->
   <footer>
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
