@@ -17,22 +17,10 @@
       font-family: 'Euclid', sans-serif;
       text-align: center;
       padding: 3rem;
-      background: ##842020;
+      background: #842020;
       color: #5E4B3C;
       margin: 0;
     }
-
-    <nav class="navbar">
-  <div class="nav-container">
-    <a href="https://pepitescoffee.com/" class="nav-logo">Pépites Coffee</a>
-    <div class="nav-links">
-      <a href="/apropos/">À propos</a>
-      <a href="/contact/">Louez-moi</a>
-      <a href="/lesescalespepites/">Projet</a>
-    </div>
-  </div>
-</nav>
-
 
     .logo {
       position: absolute;
@@ -129,7 +117,6 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
 
-    /* 🔄 MODIFIÉ POUR ALIGNER LES CONCEPTS */
     .concepts-container {
       display: flex;
       justify-content: space-around;
@@ -149,7 +136,7 @@
       border-radius: 6px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 1rem;
-      min-height: 480px; /* 👈 fixe une hauteur minimale */
+      min-height: 480px;
     }
 
     .concept-image {
@@ -217,82 +204,83 @@
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* 🎨 Filigrane "En construction" */
-  .watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    font-weight: bold;
-    color: rgba(255, 0, 0, 0.4);  /* Couleur rouge transparente */
-    z-index: 9999;  /* Assure que le texte soit au-dessus de tout */
-    pointer-events: none;  /* Permet de ne pas interférer avec les autres éléments de la page */
-    user-select: none; /* Empêche la sélection du texte */
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-family: 'Euclid', sans-serif; /* Assurez-vous que la même police est utilisée */
-    animation: fadeInOut 3s infinite; /* Animation pour faire clignoter le texte */
-  }
-
-  /* Animation du filigrane "En construction" */
-  @keyframes fadeInOut {
-    0% {
-      opacity: 0.4;
+    .watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba(255, 0, 0, 0.4);
+      z-index: 9999;
+      pointer-events: none;
+      user-select: none;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      font-family: 'Euclid', sans-serif;
+      animation: fadeInOut 3s infinite;
     }
-    50% {
-      opacity: 1;
+
+    @keyframes fadeInOut {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
     }
-    100% {
-      opacity: 0.4;
-      
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 999;
+      padding: 0.8rem 2rem;
     }
-  }
 
-    /* 🌟 BANNIÈRE NAVIGATION EN HAUT */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 999;
-  padding: 0.8rem 2rem;
-}
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .nav-logo {
+      font-family: 'Euclid', sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #842020;
+      text-decoration: none;
+    }
 
-.nav-logo {
-  font-family: 'Euclid', sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #842020;
-  text-decoration: none;
-}
+    .nav-links a {
+      margin-left: 1.5rem;
+      font-family: 'Euclid', sans-serif;
+      text-decoration: none;
+      color: #5E4B3C;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-.nav-links a {
-  margin-left: 1.5rem;
-  font-family: 'Euclid', sans-serif;
-  text-decoration: none;
-  color: #5E4B3C;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #D17A4A;
-}
-
+    .nav-links a:hover {
+      color: #D17A4A;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- ✅ NAVIGATION EN HAUT -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="https://pepitescoffee.com/" class="nav-logo">Pépites Coffee</a>
+      <div class="nav-links">
+        <a href="/apropos/">À propos</a>
+        <a href="/contact/">Louez-moi</a>
+        <a href="/lesescalespepites/">Projet</a>
+      </div>
+    </div>
+  </nav>
 
   <header class="video-header">
     <video autoplay muted loop playsinline>
@@ -310,9 +298,8 @@
 
   <p>
     Prestations privées, évènementiel, barista mobile sur-mesure.<br>
-Entreprises, marchés, événements & privatisations à Montpellier et les alentours
-Café de spécialité
-Freelance Barista / SOS Barista 
+    Entreprises, marchés, événements & privatisations à Montpellier et les alentours<br>
+    Café de spécialité — Freelance Barista / SOS Barista 
   </p>
 
   <div class="concepts-container">
@@ -338,7 +325,6 @@ Freelance Barista / SOS Barista
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
 
-   <!-- Filigrane "En construction" -->
   <div class="watermark">En construction</div>
 
 </body>
