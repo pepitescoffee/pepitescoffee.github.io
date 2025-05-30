@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yakô Cards</title>
+  <title>Pépites Coffee</title>
+
   <style>
     @font-face {
       font-family: 'Euclid';
@@ -65,6 +66,13 @@
       text-decoration: none;
       border-radius: 12px;
       font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background: #D17A4A;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
 
     footer {
@@ -106,7 +114,7 @@
       color: white;
       text-align: center;
       padding: 4rem 2rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
 
     .concepts-container {
@@ -126,6 +134,7 @@
       text-align: center;
       background: #EDF0EA;
       border-radius: 6px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 1rem;
       min-height: 480px;
     }
@@ -134,6 +143,7 @@
       width: 100%;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       object-fit: cover;
     }
 
@@ -179,45 +189,19 @@
     .concept-buttons a {
       display: inline-block;
       padding: 1rem 2rem;
-      background: #D17A4A;
-      color: #842020;
+      background: #ffff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 12px;
       margin: 0 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #842020;
-      z-index: 999;
-      padding: 0.8rem 2rem;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .nav-logo {
-      font-family: 'Euclid', sans-serif;
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #842020;
-      text-decoration: none;
-    }
-
-    .nav-links a {
-      margin-left: 1.5rem;
-      font-family: 'Euclid', sans-serif;
-      text-decoration: none;
-      color: #842020;
-      font-weight: bold;
+    .concept-buttons a:hover {
+      background: #D17A4A;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
 
     .watermark {
@@ -242,55 +226,106 @@
       50% { opacity: 1; }
       100% { opacity: 0.4; }
     }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #842020;
+      box-shadow: #FFFF ;
+      z-index: 999;
+      padding: 0.8rem 2rem;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: 'Euclid', sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #842020;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      font-family: 'Euclid', sans-serif;
+      text-decoration: none;
+      color: #D17A4A;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #D17A4A;
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="navbar">
+  <!-- ✅ NAVIGATION EN HAUT -->
+  <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">Yakô Cards</div>
+      <a href="https://pepitescoffee.com/" class="nav-logo">Pépites Coffee</a>
       <div class="nav-links">
-        <a href="#concepts">Nos Jeux</a>
-        <a href="#contact">Contact</a>
+        <a href="/apropos/">À propos</a>
+        <a href="/contact/">Louez-moi</a>
+        <a href="/lesescalespepites/">Projet</a>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="video-header">
-    <video autoplay muted loop>
-      <source src="ton-fichier-video.mp4" type="video/mp4">
-      Ton navigateur ne supporte pas la vidéo HTML5.
+  <header class="video-header">
+    <video autoplay muted loop playsinline>
+      <source src="https://pepitescoffee.github.io/ok%20film.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
     <div class="overlay"></div>
     <div class="overlay-content">
-      <h1>Bienvenue chez Yakô Cards</h1>
-      <h2>Des jeux inclusifs pour tous les enfants</h2>
+      <h1>Coffee Shop Ambulant</h1>
+      <h2>Découvrir l'univers de Pépites Coffee</h2>
+    </div>
+  </header>
+
+  <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
+
+  <p>
+    Prestations privées, évènementiel, barista mobile sur-mesure.<br>
+    Entreprises, marchés, événements & privatisations à Montpellier et les alentours<br>
+    Café de spécialité — Freelance Barista / SOS Barista 
+  </p>
+
+  <div class="concepts-container">
+    <div class="concept">
+      <img src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pepitescoffee%20.png?raw=true" alt="Concept Coffee Truck" class="concept-image" />
+      <h3>Coffee Truck</h3>
+      <p>Un coffee truck mobile pour vos événements, offrant une expérience barista unique où que vous soyez !</p>
+    </div>
+    
+    <div class="concept">
+      <img src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/Capture%20d%E2%80%99e%CC%81cran%2C%20le%202025-01-20%20a%CC%80%2014.15.43.png?raw=true" alt="Concept Coffee Bar" class="concept-image" />
+      <h3>Coffee Bar</h3>
+      <p>Notre coffee bar, parfait pour des événements plus intimes ou pour des installations sur mesure avec des options barista premium. Sublimer vos évènements. </p>
     </div>
   </div>
 
-  <section id="concepts" class="concepts-container">
-    <div class="concept">
-      <img class="concept-image" src="image1.jpg" alt="Mémotions" />
-      <h3>Mémotions</h3>
-      <p>Un jeu pour aider les enfants à reconnaître et exprimer leurs émotions tout en s’amusant.</p>
-    </div>
-    <div class="concept">
-      <img class="concept-image" src="image2.jpg" alt="7 familles" />
-      <h3>7 Familles Modernes</h3>
-      <p>Un classique revisité mettant en valeur la diversité et l’inclusion dans les familles d’aujourd’hui.</p>
-    </div>
-  </section>
-
   <div class="concept-buttons">
-    <a href="#">Découvrir notre boutique</a>
-    <a href="#">En savoir plus</a>
+    <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous pour réserver</a>
+    <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Instagram</a>
   </div>
 
   <footer>
-    © 2025 Yakô Cards. Tous droits réservés.
+    <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
 
-  <div class="watermark">Yakô Cards</div>
+  <div class="watermark">En construction</div>
 
 </body>
 </html>
