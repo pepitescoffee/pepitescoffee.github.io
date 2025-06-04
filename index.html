@@ -57,18 +57,16 @@
       margin: 1rem auto 2rem auto;
     }
 
-    a {
-      display: inline-block;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      background: #c3794c;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-    }
+   a {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
     a:hover {
       background: #D17A4A;
@@ -293,7 +291,20 @@
       .concept p {
         font-size: 1rem;
       }
-    }
+
+    /* ✅ Bouton orange uniquement pour "Louez-moi" */
+.nav-links a.louez-moi {
+  background-color: #c3794c;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a.louez-moi:hover {
+  background-color: #D17A4A;
+}
+
   </style>
 </head>
 
@@ -310,7 +321,7 @@
       <div class="nav-links">
         <a href="/apropos/">À propos</a>
         <a href="/lesescalespepites/">Projet</a>
-        <a href="/contact/" class="louez-moi">Louez-moi</a>
+<a href="/contact/" class="louez-moi">Louez-moi</a>
       </div>
     </div>
   </nav>
