@@ -24,7 +24,7 @@
 
     .logo {
       position: absolute;
-      top: 150px;
+      top: 200px; /* ↓ décalé vers le bas */
       left: 50%;
       transform: translateX(-50%);
       max-width: 200px;
@@ -35,7 +35,7 @@
       font-size: 4rem;
       font-weight: bold;
       color: #842020;
-      margin: 20rem 0 1rem 0;
+      margin: 22rem 0 1rem 0;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       z-index: 2;
     }
@@ -61,7 +61,7 @@
       display: inline-block;
       margin: 1rem;
       padding: 1rem 2rem;
-      background: #D17A4A;
+      background: #c3794c;
       color: white;
       text-decoration: none;
       border-radius: 12px;
@@ -225,7 +225,7 @@
     }
 
     .nav-logo img {
-      height: 80px;
+      height: 50px;
       width: auto;
     }
 
@@ -239,12 +239,24 @@
       font-family: 'Euclid', sans-serif;
       text-decoration: none;
       color: #fff7f7;
-      font-weight: bold;
+      font-size: 1.1rem;
+      font-weight: 500; /* moins gras */
       transition: color 0.3s;
     }
 
     .nav-links a:hover {
       color: #f0b47c;
+    }
+
+    .nav-links a.louez-moi {
+      background-color: #c3794c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .nav-links a.louez-moi:hover {
+      background-color: #D17A4A;
     }
 
     /* Responsive */
@@ -297,8 +309,8 @@
       </div>
       <div class="nav-links">
         <a href="/apropos/">À propos</a>
-        <a href="/contact/">Louez-moi</a>
         <a href="/lesescalespepites/">Projet</a>
+        <a href="/contact/" class="louez-moi">Louez-moi</a>
       </div>
     </div>
   </nav>
