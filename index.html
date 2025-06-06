@@ -1,374 +1,377 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pépites Coffee</title>
-<style>
-  @font-face {
-    font-family: 'Euclid';
-    src: url('./fonts/euclid.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pépites Coffee</title>
+  <style>
+    @font-face {
+      font-family: 'Euclid';
+      src: url('./fonts/euclid.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-  /* Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Euclid', sans-serif;
-    background: #842020;
-    color: #5E4B3C;
-    overflow-x: hidden;
-  }
+    body {
+      font-family: 'Euclid', sans-serif;
+      background: #842020;
+      color: #5E4B3C;
+    }
 
-  /* NAVBAR */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #842020;
-    z-index: 10000;
-    padding: 0.5rem 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  }
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #842020;
+      z-index: 1000;
+      padding: 0.5rem 1.5rem;
+    }
 
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-  .nav-logo img {
-    height: 100px;
-  }
+    .nav-logo img {
+      height: 100px;
+    }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-  }
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
 
-  .nav-links a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #fff7f7;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff7f7;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-  .nav-links a:hover {
-    color: #f0b47c;
-  }
+    .nav-links a:hover {
+      color: #f0b47c;
+    }
 
-  .nav-links a.louez-moi {
-    background-color: #c3794c;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-  }
+    .nav-links a.louez-moi {
+      background-color: #c3794c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+    }
 
-  .nav-links a.louez-moi:hover {
-    background-color: #D17A4A;
-  }
+    .nav-links a.louez-moi:hover {
+      background-color: #D17A4A;
+    }
 
-  /* VIDEO HEADER */
-  .video-header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: 110px; /* pour compenser la navbar fixe */
-  }
+    /* VIDEO HEADER */
+    .video-header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-  .video-header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
+    .video-header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
 
-  .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 2;
-  }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
 
-  .overlay-content {
-    position: relative;
-    z-index: 3;
-    color: white;
-    text-align: center;
-    top: 60%;
-    transform: translateY(-50%);
-    padding: 2rem 1rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-  }
+    .overlay-content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: center;
+      top: 60%;
+      transform: translateY(-50%);
+      padding: 2rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
 
-  .overlay-content h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #D17A4A;
-    margin-bottom: 1rem;
-  }
+    .overlay-content h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #D17A4A;
+      margin-bottom: 1rem;
+    }
 
-  .overlay-content h2 {
-    font-size: 2rem;
-    color: #B0C2A8;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    font-weight: normal;
-  }
+    .overlay-content h2 {
+      font-size: 2rem;
+      color: #B0C2A8;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-weight: normal;
+    }
 
-  /* LOGO CENTRÉ */
-  .logo {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 200px;
-    z-index: 4;
-  }
+    /* LOGO CENTRÉ */
+    .logo {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 200px;
+      z-index: 4;
+    }
 
-  /* TEXTES PRINCIPAUX */
-  .main-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #fff7f7;
-    font-weight: normal;
-    max-width: 100%;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  /* CONCEPTS CONTAINER */
-  .concepts-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    max-width: 1200px;
-  }
-
-  /* CONCEPT */
-  .concept {
-    flex: 1 1 48%;
-    display: flex;
-    flex-direction: column;
-    color: #5E4B3C;
-    background: transparent;
-  }
-
-  /* Image de concept */
-  .concept-image {
-    width: 100%;
-    height: 750px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-
-  /* Conteneur texte sous l'image */
-  .concept-text {
-    padding-left: 1rem;
-  }
-
-  /* Titres */
-  .concept h3 {
-    margin-bottom: 0.8rem;
-    font-size: 1.8rem;
-  }
-
-  /* Paragraphes */
-  .concept p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    max-width: 95%;
-  }
-
-  /* Pour que Coffee Bar ait sa couleur texte différente */
-  .concept.coffee-bar {
-    color: #D17A4A;
-  }
-
-  /* Boutons */
-  .concept-buttons {
-    text-align: center;
-    margin: 3rem 0 4rem 0;
-  }
-
-  .concept-buttons a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #D17A4A;
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
-    margin: 1rem;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-
-  .concept-buttons a:hover {
-    background: #842020;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #7F6A5C;
-    padding: 2rem 1rem;
-  }
-
-  /* WATERMARK */
-  .watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    font-weight: bold;
-    color: #842020;
-    z-index: 9999;
-    pointer-events: none;
-    user-select: none;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-family: 'Euclid', sans-serif;
-    animation: fadeInOut 3s infinite;
-  }
-
-  @keyframes fadeInOut {
-    0% { opacity: 0.4; }
-    50% { opacity: 1; }
-    100% { opacity: 0.4; }
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .concepts-container {
-      flex-direction: column;
+    /* TEXTES PRINCIPAUX */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #fff7f7;
+      font-weight: normal;
+      max-width: 100%;
+      margin: 2rem auto;
+      text-align: center;
       padding: 0 1rem;
     }
-    .concept {
-      width: 100%;
-      margin-bottom: 2rem;
+
+    .left-align {
+      text-align: left;
+      margin-left: 1rem;
+      max-width: 90%;
     }
-  }
-</style>
+
+    /* CONCEPTS CONTAINER */
+    .concepts-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      max-width: 1200px;
+    }
+
+    .concept {
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      width: 45%;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #5E4B3C; /* Couleur texte Coffee Truck par défaut */
+    }
+
+    .concept:nth-child(2) {
+      color: #D17A4A; /* Couleur texte Coffee Bar */
+      padding-left: 1rem;
+    }
+
+    .concept h3 {
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .concept p {
+      margin-left: 1rem;
+      max-width: 90%;
+    }
+
+    .concept-image {
+      width: 100%;
+      height: 750px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    /* BOUTONS CONCEPT */
+    .concept-buttons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .concept-buttons a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #D17A4A;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      margin: 1rem;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .concept-buttons a:hover {
+      background: #842020;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7F6A5C;
+      padding: 2rem 1rem;
+    }
+
+    /* WATERMARK */
+    .watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      font-weight: bold;
+      color: #842020;
+      z-index: 9999;
+      pointer-events: none;
+      user-select: none;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      font-family: 'Euclid', sans-serif;
+      animation: fadeInOut 3s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-logo img {
+        height: 80px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+      }
+
+      .nav-links a {
+        margin: 0.5rem 0;
+      }
+
+      .concept {
+        width: 100%;
+      }
+
+      .overlay-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .overlay-content h2 {
+        font-size: 1.2rem;
+      }
+
+      .logo {
+        max-width: 140px;
+      }
+
+      p {
+        text-align: center;
+        margin: 1rem auto;
+        max-width: 95%;
+      }
+
+      .left-align {
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
         <a href="/">
-          <img
-            src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pepitescoffee%20.png?raw=true"
-            alt="Logo Pépites Coffee"
-          />
+          <img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo Pépites Coffee" />
         </a>
       </div>
       <div class="nav-links">
-        <a href="https://www.instagram.com/pepitescoffee/" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation" class="louez-moi">Louez-moi</a>
+        <a href="/apropos/">À propos</a>
+        <a href="/lesescalespepites/">Projet</a>
+        <a href="/contact/" class="louez-moi">Louez-moi</a>
       </div>
     </div>
   </nav>
 
-  <!-- VIDEO HEADER -->
   <header class="video-header">
     <video autoplay muted loop playsinline>
-      <source src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pexels-aleksandar-pasaric-2373253.mp4?raw=true" type="video/mp4" />
-      Votre navigateur ne supporte pas la vidéo.
+      <source src="https://pepitescoffee.github.io/ok%20film.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
-
     <div class="overlay"></div>
-
     <div class="overlay-content">
-      <h1>Pépites Coffee</h1>
-      <h2>Le coffee truck qui pétille</h2>
+      <h1>Coffee Shop Ambulant</h1>
+      <h2>Découvrir l'univers de Pépites Coffee</h2>
     </div>
-
-    <img
-      class="logo"
-      src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pepitescoffee%20.png?raw=true"
-      alt="Logo Pépites Coffee"
-    />
+    <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee" />
   </header>
 
-  <!-- TEXT PRINCIPAL -->
-  <section class="main-text">
-    <p>
-      Pépites Coffee, c’est un coffee truck et un coffee bar mobile qui s’adaptent à vos envies et événements.
-    </p>
-  </section>
+  <p class="intro">
+    <strong class="highlight">Tout commence avec une envie de liberté, de café et de belles rencontres au fil des routes.</strong><br />
+    Un sourire, une tasse fumante, de la convivialité et du partage — c’est ça, Pépites Coffee.<br />
+    Moi, c’est Cora, et Pépites Coffee, c’est un café mobile qui sert des cafés de spécialité, préparés avec soin et bonne humeur.<br />
+    Vous pouvez me retrouver sur les marchés, événements, privatisations… Bref, là où le café se partage.
+  </p>
 
-  <!-- CONCEPTS -->
-  <section class="concepts-container">
-
-    <div class="concept coffee-truck">
-      <img
-        src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pepitescoffee%20.png?raw=true"
-        alt="Concept Coffee Truck"
-        class="concept-image"
-      />
-      <div class="concept-text">
-        <h3>Coffee Truck</h3>
-        <p>
-          Un coffee truck mobile pour vos événements, offrant une expérience barista unique où que vous soyez !
-        </p>
-      </div>
+  <div class="concepts-container">
+    <div class="concept">
+      <img src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/pepitescoffee%20.png?raw=true" alt="Concept Coffee Truck" class="concept-image" />
+      <h3>Coffee Truck</h3>
+      <p class="left-align">Un coffee truck mobile pour vos événements, offrant une expérience barista unique où que vous soyez !</p>
     </div>
 
-    <div class="concept coffee-bar">
-      <img
-        src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/Capture%20d%E2%80%99e%CC%81cran%2C%20le%202025-01-20%20a%CC%80%2014.15.43.png?raw=true"
-        alt="Concept Coffee Bar"
-        class="concept-image"
-      />
-      <div class="concept-text">
-        <h3>Le Coffee Bar</h3>
-        <p>
-          Pensé comme un pop-up bar à café, il s’intègre facilement dans des salons, foires, événements indoor ou même au sein de boutiques.
-          Il apporte une vraie expérience café, entre savoir-faire barista et convivialité, au cœur de votre lieu.
-        </p>
-      </div>
+    <div class="concept">
+      <img src="https://github.com/pepitescoffee/pepitescoffee.github.io/blob/main/Capture%20d%E2%80%99e%CC%81cran%2C%20le%202025-01-20%20a%CC%80%2014.15.43.png?raw=true" alt="Concept Coffee Bar" class="concept-image" />
+      <h3>Le Coffee Bar</h3>
+      <p class="left-align">Pensé comme un pop-up bar à café, il s’intègre facilement dans des salons, foires, événements indoor ou même au sein de boutiques. Il apporte une vraie expérience café, entre savoir-faire barista et convivialité, au cœur de votre lieu.</p>
     </div>
-
-  </section>
-
-  <!-- BOUTONS -->
-  <div class="concept-buttons">
-    <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous pour réserver</a>
-    <a href="https://www.instagram.com/pepitescoffee/" target="_blank" rel="noopener">Instagram</a>
   </div>
 
-  <!-- FOOTER -->
+  <div class="concept-buttons">
+    <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous pour réserver</a>
+    <a href="https://www.instagram.com/pepitescoffee/" target="_blank">Instagram</a>
+  </div>
+
   <footer>
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
   </footer>
 
-  <!-- WATERMARK -->
   <div class="watermark">En construction</div>
 
 </body>
