@@ -219,13 +219,17 @@
     }
 
     /* BOUTONS CONCEPT */
-    .concept-buttons {
-      text-align: center;
-      margin: 2rem 0;
-    }
 
-    .concept-buttons a {
-  display: inline-flex; /* pour aligner texte/image facilement */
+    .concept-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.concept-buttons a {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
@@ -234,35 +238,33 @@
   text-decoration: none;
   border-radius: 12px;
   font-weight: bold;
-  margin: 1rem;
   transition: background-color 0.3s, box-shadow 0.3s;
-  width: auto;  /* taille automatique */
-  height: 48px; /* hauteur fixe pour tous les boutons */
+  height: 48px;
 }
 
 .concept-buttons a.instagram-button {
-  padding: 0;          /* on enlève le padding pour que ça colle au logo */
-  width: 48px;         /* largeur fixe carrée */
-  height: 48px;        /* hauteur fixe carrée */
+  padding: 0;
+  width: 48px;
+  height: 48px;
   background-color: #D17A4A;
   border-radius: 12px;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0;      /* pour pas trop d’espace avec le bouton contact */
 }
 
 .concept-buttons a.instagram-button img {
-  width: 24px;       /* taille du logo */
+  width: 24px;
   height: 24px;
   display: block;
 }
 
-    .concept-buttons a:hover {
-      background: #842020;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    }
+.concept-buttons a:hover {
+  background: #842020;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 
     /* FOOTER */
     footer {
@@ -400,11 +402,11 @@
   </div>
 
   <div class="concept-buttons">
-    <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous pour réserver</a>
-<a href="https://www.instagram.com/pepitescoffee/" class="concept-button instagram-button" target="_blank">
-  <img src="https://pepitescoffee.github.io/Calque_1-2.png" alt="Instagram" />
-</a>
-  </div>
+  <a href="mailto:pepitescoffee@gmail.com?subject=Demande%20de%20prestation">Contactez-nous pour réserver</a>
+  <a href="https://www.instagram.com/pepitescoffee/" class="instagram-button" target="_blank" aria-label="Instagram">
+    <img src="https://pepitescoffee.github.io/Calque_1-2.png" alt="Instagram" />
+  </a>
+</div>
 
   <footer>
     <p>&copy; 2025 Pépites Coffee. Tous droits réservés.</p>
