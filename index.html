@@ -13,96 +13,89 @@
       font-style: normal;
     }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Euclid', sans-serif;
-      text-align: center;
-      padding: 3rem;
       background: #842020;
       color: #5E4B3C;
-      margin: 0;
     }
 
-.logo {
-  position: absolute;
-  top: calc(50vh - 100px); /* Centré verticalement moins un peu */
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 200px;
-  z-index: 3;
-}
+    /* ✅ NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #842020;
+      z-index: 1000;
+      padding: 0.5rem 1.5rem;
+    }
 
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
+    .nav-logo img {
+      height: 100px;
+    }
 
-    h1 {
-      font-size: 4rem;
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff7f7;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f0b47c;
+    }
+
+    .nav-links a.louez-moi {
+      background-color: #c3794c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      color: white;
       font-weight: bold;
-      color: #842020;
-      margin: 22rem 0 1rem 0;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      z-index: 2;
     }
 
-    h2 {
-      font-size: 2rem;
-      color: #788770;
-      margin-top: 0;
-      text-shadow: none;
-      z-index: 2;
+    .nav-links a.louez-moi:hover {
+      background-color: #D17A4A;
     }
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #3E2C2A;
-      font-weight: bold;
-      max-width: 100%;
-      margin: 1rem auto 2rem auto;
-    }
-
-   a {
-  display: inline-block;
-  margin: 1rem;
-  padding: 1rem 2rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-    a:hover {
-      background: #D17A4A;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #7F6A5C;
-    }
-
+    /* ✅ VIDEO HEADER */
     .video-header {
       position: relative;
       width: 100%;
       height: 100vh;
       overflow: hidden;
-      padding-top: 160px; /* Hauteur approximative de la navbar avec le logo */
-
-}
-
     }
 
     .video-header video {
       position: absolute;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: 1;
     }
 
-    .video-header .overlay {
+    .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -112,43 +105,76 @@
       z-index: 2;
     }
 
-    .video-header .overlay-content {
+    .overlay-content {
       position: relative;
       z-index: 3;
       color: white;
       text-align: center;
-      padding: 4rem 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 2rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .overlay-content h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .overlay-content h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    /* ✅ LOGO CENTRÉ */
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 200px;
+      z-index: 4;
+    }
+
+    /* ✅ SECTIONS APRÈS VIDEO */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #3E2C2A;
+      font-weight: bold;
+      max-width: 100%;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
     }
 
     .concepts-container {
       display: flex;
       justify-content: space-around;
-      align-items: stretch;
-      margin-top: 4rem;
-      padding: 0 2rem;
+      flex-wrap: wrap;
       gap: 2rem;
+      margin: 2rem auto;
+      padding: 0 2rem;
     }
 
     .concept {
-      width: 45%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
       background: #EDF0EA;
       border-radius: 6px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 1rem;
+      width: 45%;
       min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .concept-image {
       width: 100%;
-      height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .concept h3 {
@@ -165,26 +191,32 @@
     }
 
     .concept-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
+      text-align: center;
+      margin: 2rem 0;
     }
 
     .concept-buttons a {
       display: inline-block;
       padding: 1rem 2rem;
       background: #D17A4A;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
       border-radius: 12px;
-      margin: 0 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-weight: bold;
+      margin: 1rem;
+      transition: background-color 0.3s, box-shadow 0.3s;
     }
 
-    .concept-buttons a:hover { 
+    .concept-buttons a:hover {
       background: #842020;
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7F6A5C;
+      padding: 2rem 1rem;
     }
 
     .watermark {
@@ -210,124 +242,58 @@
       100% { opacity: 0.4; }
     }
 
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #842020;
-      z-index: 999;
-      padding: 0.5rem 1.5rem; /* ↓ moins d’espace */
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .nav-logo img {
-      height: 150px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-links a {
-      margin-left: 1.5rem;
-      font-family: 'Euclid', sans-serif;
-      text-decoration: none;
-      color: #fff7f7;
-      font-size: 1.1rem;
-      font-weight: 500; /* moins gras */
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #f0b47c;
-    }
-
-    .nav-links a.louez-moi {
-      background-color: #c3794c;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      color: white;
-    }
-
-    .nav-links a.louez-moi:hover {
-      background-color: #D17A4A;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       .nav-container {
         flex-direction: column;
         align-items: flex-start;
       }
 
+      .nav-logo img {
+        height: 80px;
+      }
+
       .nav-links {
-        margin-top: 1rem;
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 1rem;
       }
 
       .nav-links a {
         margin: 0.5rem 0;
       }
 
-      .concepts-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
       .concept {
-        width: 80%;
-        margin-bottom: 2rem;
+        width: 100%;
       }
 
-      .concept h3 {
-        font-size: 1.5rem;
+      .overlay-content h1 {
+        font-size: 2.5rem;
       }
 
-      .concept p {
-        font-size: 1rem;
+      .overlay-content h2 {
+        font-size: 1.2rem;
       }
 
-    /* ✅ Bouton orange uniquement pour "Louez-moi" */
-.nav-links a.louez-moi {
-  background-color: #c3794c;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-}
-
-.nav-links a.louez-moi:hover {
-  background-color: #D17A4A;
-}
-
+      .logo {
+        max-width: 140px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ✅ NAVIGATION EN HAUT -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
-        <a href="https://pepitescoffee.com/">
+        <a href="/">
           <img src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo Pépites Coffee" />
         </a>
       </div>
       <div class="nav-links">
         <a href="/apropos/">À propos</a>
         <a href="/lesescalespepites/">Projet</a>
-<a href="/contact/" class="louez-moi">Louez-moi</a>
+        <a href="/contact/" class="louez-moi">Louez-moi</a>
       </div>
     </div>
   </nav>
@@ -342,9 +308,8 @@
       <h1>Coffee Shop Ambulant</h1>
       <h2>Découvrir l'univers de Pépites Coffee</h2>
     </div>
+    <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee" />
   </header>
-
-  <img class="logo" src="https://pepitescoffee.github.io/pepitescoffeelogo_round_color.png" alt="Logo rond de Pépites Coffee, coffee shop ambulant" />
 
   <p>
     Prestations privées, évènementiel, barista mobile sur-mesure.<br>
