@@ -110,7 +110,7 @@
       z-index: 3;
       color: white;
       text-align: center;
-      top: 50%;
+      top: 60%; /* décalé pour passer sous le logo */
       transform: translateY(-50%);
       padding: 2rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.6);
@@ -119,18 +119,24 @@
     .overlay-content h1 {
       font-size: 4rem;
       font-weight: bold;
+      color: white; /* ✅ modifie ici la couleur */
       margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .overlay-content h2 {
       font-size: 2rem;
-      margin: 0;
+      color: white; /* ✅ modifie ici la couleur */
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-weight: normal;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     /* ✅ LOGO CENTRÉ */
     .logo {
       position: absolute;
-      top: 50%;
+      top: 30%; /* le logo remonte légèrement */
       left: 50%;
       transform: translate(-50%, -50%);
       max-width: 200px;
@@ -277,27 +283,6 @@
       .logo {
         max-width: 140px;
       }
-
-      .video-header .overlay-content h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: white; /* ✅ Couleur du texte */
-  margin-top: 180px; /* ✅ Décalé vers le bas pour ne pas être caché par le logo */
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* ✅ Meilleure lisibilité sur la vidéo */
-  z-index: 3;
-}
-
-.video-header .overlay-content h2 {
-  font-size: 2rem;
-  color: white; /* ✅ Couleur du texte */
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: normal;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  z-index: 3;
-}
-
     }
   </style>
 </head>
