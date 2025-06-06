@@ -224,36 +224,40 @@
       margin: 2rem 0;
     }
 
-         .instagram-button {
-  width: 48px;
-  height: 48px;
+    .concept-buttons a {
+  display: inline-flex; /* pour aligner texte/image facilement */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: #D17A4A;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: auto;  /* taille automatique */
+  height: 48px; /* hauteur fixe pour tous les boutons */
+}
+
+.concept-buttons a.instagram-button {
+  padding: 0;          /* on enlève le padding pour que ça colle au logo */
+  width: 48px;         /* largeur fixe carrée */
+  height: 48px;        /* hauteur fixe carrée */
+  background-color: #D17A4A;
+  border-radius: 12px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  background-color: #fff;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  margin-left: 0;      /* pour pas trop d’espace avec le bouton contact */
 }
 
-.instagram-button img {
-  width: 24px;
-  height: auto;
+.concept-buttons a.instagram-button img {
+  width: 24px;       /* taille du logo */
+  height: 24px;
   display: block;
 }
-
-
-    .concept-buttons a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #D17A4A;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      margin: 1rem;
-      transition: background-color 0.3s, box-shadow 0.3s;
-    }
 
     .concept-buttons a:hover {
       background: #842020;
