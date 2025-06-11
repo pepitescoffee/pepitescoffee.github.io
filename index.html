@@ -284,9 +284,9 @@
     
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* était 180px */
+  grid-template-columns: repeat(5, 1fr); /* 5 colonnes fixes */
   gap: 1.5rem;
-  max-width: 1000px;
+  max-width: 1200px; 
   margin: 4rem auto 2rem;
   padding: 0 2rem;
 }
@@ -300,10 +300,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; /* prend toute la largeur de la colonne */
-  height: auto; /* aspect-ratio contrôle la hauteur */
+  width: 100%; /* important */
 }
-
 
 
 .image-tile img {
