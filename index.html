@@ -281,15 +281,16 @@
   background: #842020;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
-
+    
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Force 5 colonnes fixes */
-  gap: 1rem;
-  max-width: 100%;
-  margin: 2rem auto;
-  padding: 0 1rem; /* Réduit les marges gauche/droite */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* était 180px */
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 4rem auto 2rem;
+  padding: 0 2rem;
 }
+
 
 
 .image-tile {
