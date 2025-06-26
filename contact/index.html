@@ -148,6 +148,36 @@
   <option value="autre">Autres (à préciser dans votre message)</option>
     </select>
 
+
+ <!-- Nouveau champ Lieu -->
+  <label for="location">Lieu de la prestation *</label>
+  <input type="text" id="location" name="location" required placeholder="Ville, adresse ou lieu précis" />
+
+  <!-- Nouveau champ Nombre convives -->
+  <label for="guests">Nombre approximatif de convives *</label>
+  <input type="number" id="guests" name="guests" required min="1" placeholder="Ex : 50" />
+
+  <!-- Nouveau champ Formule choisie (cases à cocher) -->
+  <fieldset>
+    <legend>Formule choisie *</legend>
+
+    <label>
+      <input type="checkbox" name="formule" value="Classique" />
+      Classique
+    </label>
+
+    <label>
+      <input type="checkbox" name="formule" value="Premium" />
+      Premium
+    </label>
+
+    <label>
+      <input type="checkbox" name="formule" value="Sur-mesure" />
+      Sur-mesure
+    </label>
+  </fieldset>
+
+  
     <label for="message">Votre message / demande particulière</label>
     <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez vos questions..."></textarea>
 
