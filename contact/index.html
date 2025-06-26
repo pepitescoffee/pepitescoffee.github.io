@@ -1,77 +1,164 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Louez Pépites Coffee</title>
-  <link rel="stylesheet" href="/style.css" />
-  <style>
-    body {
-      background-color: #9e1b1f; /* Rouge de ton site */
-      color: white;
-      font-family: 'Helvetica Neue', sans-serif;
-      padding: 2rem;
-      margin: 0;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Louez-moi - Pépites Coffee</title>
 
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 2rem;
+  <style>
+    @font-face {
+      font-family: 'Euclid';
+      src: url('../fonts/euclid.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      font-family: 'Euclid', sans-serif;
+      background-color: #842020;
+      color: #fff7f7;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 3rem 1rem;
     }
 
     h1 {
-      font-size: 2rem;
+      color: #D17A4A;
       margin-bottom: 1rem;
       text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
     }
 
-    p {
-      line-height: 1.6;
+    p.intro {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    form {
+      background: #5E4B3C;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Euclid', sans-serif;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    input[type="submit"] {
+      background-color: #D17A4A;
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 0.9rem 2rem;
       font-size: 1.1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #f0b47c;
     }
 
     .contact-info {
-      margin-top: 1.5rem;
-    }
-
-    .contact-info p {
-      margin: 0.5rem 0;
-    }
-
-    a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-
-    .back-button {
-      display: block;
       margin-top: 2rem;
+      max-width: 600px;
       text-align: center;
-      color: #fff;
-      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: #f0b47c;
+    }
+
+    .contact-info a {
+      color: #f0b47c;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body {
+        padding: 2rem 1rem;
+      }
+      form {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Louez Pépites Coffee</h1>
-    <p>Vous souhaitez faire appel à notre coffee truck pour :</p>
-    <ul>
-      <li>Un événement privé (mariage, anniversaire, brunch...)</li>
-      <li>Un événement professionnel (séminaire, inauguration...)</li>
-      <li>Un marché, un festival ou un tournage</li>
-    </ul>
-    <p>N'hésitez pas à nous contacter :</p>
 
-    <div class="contact-info">
-      <p><strong>Téléphone :</strong> <a href="tel:+33612345678">06 12 34 56 78</a></p>
-      <p><strong>Email :</strong> <a href="mailto:pepitescoffee@gmail.com">pepitescoffee@gmail.com</a></p>
-    </div>
+  <h1>Louez Pépites Coffee</h1>
+  <p class="intro">
+    Vous organisez un événement et souhaitez un coffee truck chaleureux et gourmand ?  
+    Remplissez le formulaire ci-dessous pour une demande de devis ou plus d’informations.
+  </p>
 
-    <a class="back-button" href="/">← Retour à l'accueil</a>
+  <form method="POST" https://formspree.io/f/xeokpbpg>
+    <label for="name">Nom complet *</label>
+    <input type="text" id="name" name="name" required placeholder="Votre nom complet" />
+
+    <label for="email">Adresse e-mail *</label>
+    <input type="email" id="email" name="_replyto" required placeholder="exemple@domaine.com" />
+
+    <label for="phone">Téléphone</label>
+    <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" />
+
+    <label for="event-type">Type d'événement *</label>
+    <select id="event-type" name="event-type" required>
+      <option value="" disabled selected>Choisissez une option</option>
+      <option value="mariage">Mariage</option>
+      <option value="événement professionnel">Événement professionnel</option>
+      <option value="marché/festival">Marché / Festival</option>
+      <option value="privatisation">Privatisation</option>
+      <option value="autre">Autre</option>
+    </select>
+
+    <label for="message">Votre message / demande particulière</label>
+    <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez vos questions..."></textarea>
+
+    <input type="submit" value="Envoyer la demande" />
+  </form>
+
+  <div class="contact-info">
+    <p>Ou contactez-moi directement :</p>
+    <p>Téléphone : <a href="tel:+33612345678">+33 6 12 34 56 78</a></p>
+    <p>Email : <a href="mailto:pepitescoffee@gmail.com">pepitescoffee@gmail.com</a></p>
   </div>
+
 </body>
 </html>
+
