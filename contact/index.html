@@ -173,6 +173,57 @@
       padding: 0 0.5rem;
     }
 
+
+    .offre-visuelle {
+  margin-top: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.offre-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.offre-item {
+  background-color: #842020;
+  border: 1px solid #f0b47c;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 300px;
+  flex: 1 1 250px;
+  text-align: center;
+  color: #fff7f7;
+}
+
+.offre-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.offre-item h3 {
+  color: #D17A4A;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.offre-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offre-item ul li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
     /* Responsive */
     @media (max-width: 480px) {
       body {
@@ -266,5 +317,53 @@
   <input type="submit" value="Envoyer votre demande de devis" />
 </form>
 
+<section class="offre-visuelle">
+  <div class="offre-container">
+    <div class="offre-item">
+      <img src="LIEN_IMAGE_1" alt="Boissons chaudes" />
+      <h3>Boissons chaudes</h3>
+      <ul>
+        <li>Espresso</li>
+        <li>Allongé</li>
+        <li>Double</li>
+        <li>Noisette</li>
+        <li>Cappuccino</li>
+        <li>Flat white</li>
+        <li>Chocolat chaud</li>
+        <li>Chaï Latte</li>
+        <li>Matcha Latte</li>
+      </ul>
+    </div>
+
+    <div class="offre-item">
+      <img src="LIEN_IMAGE_2" alt="Boissons froides" />
+      <h3>Boissons froides</h3>
+      <ul>
+        <li>Café glacé</li>
+        <li>Latte glacé</li>
+        <li>Matcha glacé</li>
+        <li>Chaï glacé</li>
+      </ul>
+    </div>
+
+    <div class="offre-item">
+      <img src="LIEN_IMAGE_3" alt="Pâtisseries" />
+      <h3>Pâtisseries</h3>
+      <ul>
+        <li>Banana bread</li>
+        <li>Carrot cake</li>
+        <li>Brownie noisette</li>
+        <li>Bundt cake citron pavot</li>
+        <li>Tigré noisette caramel</li>
+        <li>Financier abricot romarin</li>
+        <li>Cookie chocolat noir fleur de sel</li>
+        <li>Croissant/pain au chocolat</li>
+        <li>Autres recettes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  
 </body>
 </html>
