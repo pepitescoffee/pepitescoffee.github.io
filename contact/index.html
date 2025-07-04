@@ -75,8 +75,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 3rem 1rem 1rem 1rem; /* padding top modifié pour ne pas cacher contenu sous navbar */
-      padding-top: 140px; /* marge en haut pour navbar fixe */
+      padding: 3rem 1rem 1rem 1rem;
+      padding-top: 140px;
     }
 
     h1 {
@@ -159,9 +159,8 @@
       text-decoration: underline;
     }
 
-
     fieldset {
-      margin: 2rem 0; /* marge 2rem en haut et en bas */
+      margin: 2rem 0;
       padding: 1rem 1.2rem;
       border-radius: 12px;
       border: 1px solid #f0b47c;
@@ -173,58 +172,65 @@
       padding: 0 0.5rem;
     }
 
+    .formule-detail {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #f0d9c0;
+      margin-top: 0.2rem;
+      margin-left: 1.5rem;
+    }
 
     .offre-visuelle {
-  margin-top: 3rem;
-  max-width: 1200px;
-  width: 100%;
-}
+      margin-top: 3rem;
+      max-width: 1200px;
+      width: 100%;
+    }
 
-.offre-container {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .offre-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.offre-item {
-  background-color: #842020;
-  border: 1px solid #f0b47c;
-  border-radius: 12px;
-  padding: 1rem;
-  max-width: 300px;
-  flex: 1 1 250px;
-  text-align: center;
-  color: #fff7f7;
-}
+    .offre-item {
+      background-color: #842020;
+      border: 1px solid #f0b47c;
+      border-radius: 12px;
+      padding: 1rem;
+      max-width: 300px;
+      flex: 1 1 250px;
+      text-align: center;
+      color: #fff7f7;
+    }
 
-.offre-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
+    .offre-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
 
-.offre-item h3 {
-  color: #D17A4A;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
+    .offre-item h3 {
+      color: #D17A4A;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
 
-.offre-item ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+    .offre-item ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
 
-.offre-item ul li {
-  margin-bottom: 0.4rem;
-  font-size: 1rem;
-  line-height: 1.4;
-}
+    .offre-item ul li {
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
 
-    /* Responsive */
     @media (max-width: 480px) {
       body {
         padding: 2rem 1rem 1rem 1rem;
@@ -255,10 +261,10 @@
 
   <h1>Privatisez Pépites Coffee</h1>
   <p class="intro">
-   Transformez votre événement en véritable expérience café ! Privatisez notre coffee truck ou coffee bar et faites voyager vos invités autour d’un café de spécialité. Demandez votre devis personnalisé via le formulaire ci-dessous.
+    Transformez votre événement en véritable expérience café ! Privatisez notre coffee truck ou coffee bar et faites voyager vos invités autour d’un café de spécialité. Demandez votre devis personnalisé via le formulaire ci-dessous.
   </p>
 
-<form method="POST" action="https://formspree.io/f/xeokpbpg">
+  <form method="POST" action="https://formspree.io/f/xeokpbpg">
     <label for="name">Nom complet *</label>
     <input type="text" id="name" name="name" required placeholder="Votre nom complet" />
 
@@ -279,87 +285,82 @@
       <option value="autre">Autres (à préciser dans votre message)</option>
     </select>
 
-  <!-- Nouveau champ Lieu -->
-  <label for="location">Lieu de la prestation *</label>
-  <input type="text" id="location" name="location" required placeholder="Ville, adresse ou lieu précis" />
+    <label for="location">Lieu de la prestation *</label>
+    <input type="text" id="location" name="location" required placeholder="Ville, adresse ou lieu précis" />
 
-  <!-- Nouveau champ Nombre convives -->
-  <label for="guests">Nombre approximatif de convives *</label>
-  <input type="number" id="guests" name="guests" required min="1" placeholder="Ex : 50" />
+    <label for="guests">Nombre approximatif de convives *</label>
+    <input type="number" id="guests" name="guests" required min="1" placeholder="Ex : 50" />
 
-  <!-- Nouveau champ Formule choisie (cases à cocher) -->
-  <fieldset>
-    <legend>Composez votre service café *</legend>
+    <fieldset>
+      <legend>Composez votre service café *</legend>
 
- <label>
-  <input type="checkbox" name="formule" value="Essentiel" />
-  L'Essentiel :
-  Espresso à volonté + 1 boisson signature par invité
-</label>
+      <label>
+        <input type="checkbox" name="formule" value="Essentiel" />
+        L'Essentiel :
+        <span class="formule-detail">Espresso à volonté + 1 boisson signature par invité</span>
+      </label>
 
-<label>
-  <input type="checkbox" name="formule" value="La rafraîchissante" />
- La Rafraîchissante :
-L'Essentiel + Jarre de citronnade maison, thé glacé ou jus artisanaux
-</label>
+      <label>
+        <input type="checkbox" name="formule" value="La rafraîchissante" />
+        La Rafraîchissante :
+        <span class="formule-detail">L'Essentiel + Jarre de citronnade maison, thé glacé ou jus artisanaux</span>
+      </label>
 
-<label>
-  <input type="checkbox" name="formule" value="Gourmand" />
-  La Gourmande :
-  La Rafraîchissante + Assortiment de pâtisseries maison
-</label>
-  </fieldset>
+      <label>
+        <input type="checkbox" name="formule" value="Gourmand" />
+        La Gourmande :
+        <span class="formule-detail">La Rafraîchissante + Assortiment de pâtisseries maison</span>
+      </label>
+    </fieldset>
 
-  <label for="message">Votre message / demande particulière</label>
-  <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez vos questions..."></textarea>
+    <label for="message">Votre message / demande particulière</label>
+    <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez vos questions..."></textarea>
 
-  <input type="submit" value="Envoyer votre demande de devis" />
-</form>
+    <input type="submit" value="Envoyer votre demande de devis" />
+  </form>
 
-<section class="offre-visuelle">
-  <div class="offre-container">
-    <div class="offre-item">
-      <img src="https://pepitescoffee.github.io/latteart2.png" alt="Boissons signatures" />
-      <h3>Boissons signatures</h3>
-      <ul>
-        <li>Noisette</li>
-        <li>Cappuccino</li>
-        <li>Flat white</li>
-        <li>Chocolat chaud</li>
-        <li>Chaï Latte</li>
-        <li>Matcha Latte</li>
-      </ul>
+  <section class="offre-visuelle">
+    <div class="offre-container">
+      <div class="offre-item">
+        <img src="https://pepitescoffee.github.io/latteart2.png" alt="Boissons signatures" />
+        <h3>Boissons signatures</h3>
+        <ul>
+          <li>Noisette</li>
+          <li>Cappuccino</li>
+          <li>Flat white</li>
+          <li>Chocolat chaud</li>
+          <li>Chaï Latte</li>
+          <li>Matcha Latte</li>
+        </ul>
+      </div>
+
+      <div class="offre-item">
+        <img src="https://pepitescoffee.github.io/cafefrappe.png" alt="Boissons froides" />
+        <h3>Boissons froides</h3>
+        <ul>
+          <li>Café glacé</li>
+          <li>Latte glacé</li>
+          <li>Matcha glacé</li>
+          <li>Chaï glacé</li>
+        </ul>
+      </div>
+
+      <div class="offre-item">
+        <img src="https://pepitescoffee.github.io/cookies.jpeg" alt="Pâtisseries" />
+        <h3>Pâtisseries</h3>
+        <ul>
+          <li>Banana bread</li>
+          <li>Carrot cake</li>
+          <li>Brownie noisette</li>
+          <li>Bundt cake citron pavot</li>
+          <li>Tigré noisette caramel</li>
+          <li>Financier abricot romarin</li>
+          <li>Cookie chocolat noir fleur de sel</li>
+          <li>Croissant/pain au chocolat</li>
+          <li>Autres recettes</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="offre-item">
-      <img src="https://pepitescoffee.github.io/cafefrappe.png" alt="Boissons froides" />
-      <h3>Boissons froides</h3>
-      <ul>
-        <li>Café glacé</li>
-        <li>Latte glacé</li>
-        <li>Matcha glacé</li>
-        <li>Chaï glacé</li>
-      </ul>
-    </div>
-
-    <div class="offre-item">
-      <img src="https://pepitescoffee.github.io/cookies.jpeg" alt="Pâtisseries" />
-      <h3>Pâtisseries</h3>
-      <ul>
-        <li>Banana bread</li>
-        <li>Carrot cake</li>
-        <li>Brownie noisette</li>
-        <li>Bundt cake citron pavot</li>
-        <li>Tigré noisette caramel</li>
-        <li>Financier abricot romarin</li>
-        <li>Cookie chocolat noir fleur de sel</li>
-        <li>Croissant/pain au chocolat</li>
-        <li>Autres recettes</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-  
+  </section>
 </body>
 </html>
