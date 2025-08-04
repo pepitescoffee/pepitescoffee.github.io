@@ -343,6 +343,23 @@
         align-items: flex-start;
       }
 
+      .intro,
+p,
+.left-align {
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+      .concept-buttons {
+  flex-direction: column;
+  align-items: center;
+}
+
+.concept-buttons a {
+  width: 80%;
+}
+
+      
       .nav-logo img {
         height: 80px;
       }
@@ -361,6 +378,10 @@
         width: 100%;
       }
 
+      .overlay-content {
+  top: 50%;
+  padding: 1rem;
+}
       .overlay-content h1 {
         font-size: 2.5rem;
       }
@@ -370,7 +391,8 @@
       }
 
       .logo {
-        max-width: 140px;
+          top: 20%;
+max-width: 100px;
       }
 
       p {
@@ -385,6 +407,19 @@
       }
 
     }
+
+    @media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+    gap: 1rem;
+    margin: 3rem auto;
+  }
+
+  .image-tile {
+    aspect-ratio: 1 / 1;
+  }
+}
+
   </style>
 </head>
 
